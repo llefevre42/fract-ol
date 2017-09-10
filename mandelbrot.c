@@ -6,7 +6,7 @@
 /*   By: llefevre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/16 16:55:49 by llefevre          #+#    #+#             */
-/*   Updated: 2017/08/25 01:32:14 by llefevre         ###   ########.fr       */
+/*   Updated: 2017/08/29 10:47:19 by llefevre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	tracer_man(t_tri *lst)
 	long double	ri;
 	long int	i;
 
+	printf("%Lf\n", lst->iter);
 	put_in_black(lst);
 	x = 0.0;
 	y = 0.0;
@@ -30,7 +31,7 @@ void	tracer_man(t_tri *lst)
 	{
 		while( y < 1000)
 		{
-			lst->color = 0XFFFF00;
+			lst->color = lst->swap_color;
 			x1 = (x - lst->rv1) / lst->zoom;		
 			y1 = (y - lst->rv2) / lst->zoom;
 			r = 0;///*-0.70176 * -0.70176;*/ lst->v2;

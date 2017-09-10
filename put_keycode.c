@@ -6,7 +6,7 @@
 /*   By: llefevre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/18 04:43:39 by llefevre          #+#    #+#             */
-/*   Updated: 2017/08/25 01:33:45 by llefevre         ###   ########.fr       */
+/*   Updated: 2017/08/29 08:26:07 by llefevre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,9 +132,9 @@ int		my_key_funct(int keycode, void *param)
 		lst->color = 0XBBC22C;
 		lst->swap_color = lst->color;
 	}
-	if (0 == ft_strcmp(lst->av, "buddhabrot"))
+	if (0 == ft_strcmp(lst->av, "burningship"))
 	{
-		tracer_budd(lst);
+		tracer_burn(lst);
 	}
 	if (0 == ft_strcmp(lst->av, "mandelbrot"))
 	{

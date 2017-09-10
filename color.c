@@ -6,7 +6,7 @@
 /*   By: llefevre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/24 18:18:33 by llefevre          #+#    #+#             */
-/*   Updated: 2017/07/26 18:11:19 by llefevre         ###   ########.fr       */
+/*   Updated: 2017/08/25 08:26:44 by llefevre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	put_in_color(long int x, long int y, int nb, t_tri *lst)
 	{
 		if(nb < lst->iter)
 		{
-			lst->color = lst->color *  (1.33 * nb + (lst->iter / 1000) ) ;
+			lst->color = lst->color *  (1.33 * nb + (lst->iter / 1000)) /*>> 16*/ ;
 			put_cub(x, y, lst);
 		}
 	}

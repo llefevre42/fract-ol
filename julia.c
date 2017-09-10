@@ -6,7 +6,7 @@
 /*   By: llefevre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/16 16:55:49 by llefevre          #+#    #+#             */
-/*   Updated: 2017/08/25 01:26:24 by llefevre         ###   ########.fr       */
+/*   Updated: 2017/08/29 10:47:15 by llefevre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	tracer_jul(t_tri *lst)
 	{
 		while( y < 1000)
 		{
-			lst->color = 0XFF0000; 
+			lst->color = lst->swap_color;
 			x1 = lst->v1;
 			y1 = lst->v2;
 			r = (x - lst->rv1) / lst->zoom;

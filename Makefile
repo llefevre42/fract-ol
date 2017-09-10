@@ -6,7 +6,7 @@
 #    By: llefevre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/06/07 20:31:18 by llefevre          #+#    #+#              #
-#    Updated: 2017/08/25 00:38:51 by llefevre         ###   ########.fr        #
+#    Updated: 2017/08/29 08:23:17 by llefevre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ LIB_FOLD = ./libft/
 
 LIB = libft/libft.a
 
-SRC = main mandelbrot put_cub put_keycode julia buddhabrot color interface_burn put_mousse zoom
+SRC = main mandelbrot put_cub put_keycode julia burningship color interface_burn put_mousse zoom interface_julia interface_mandel
 
 C_FILE = $(addsuffix .c,$(addprefix $(C_FOLDER),$(SRC)))
 
