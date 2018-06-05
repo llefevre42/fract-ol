@@ -13,5 +13,4 @@ Bases du projet : Afficher 3 fractal dont 2 imposer (Julia, Mandelbrot) et dans 
 Option bonus : interface utlisateur, large choix de couleur, la couleur change en fonction des iterration, 
 zoom dans la limite de la machine, modification de l'intervale en fonction de la souris.
 
-![](jul.png) 
-![](inter.png)
+![](julia.png) ![](inter.png)
