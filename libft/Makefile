@@ -6,7 +6,7 @@
 #    By: thvocans <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/23 19:03:58 by thvocans          #+#    #+#              #
-#    Updated: 2017/07/12 16:59:49 by llefevre         ###   ########.fr        #
+#    Updated: 2017/10/17 17:45:07 by llefevre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 
 NAME = libft.a
 
-FLAGS = -Wall -Wextra -Werror -O3 -I $(H_FOLDER)
+FLAGS = -Wall -Wextra -Werror -O2 -I $(H_FOLDER)
 
 C_FOLDER = ./
 

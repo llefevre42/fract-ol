@@ -6,7 +6,7 @@
 /*   By: llefevre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/02 21:50:43 by llefevre          #+#    #+#             */
-/*   Updated: 2017/08/29 08:03:54 by llefevre         ###   ########.fr       */
+/*   Updated: 2017/10/15 18:04:35 by llefevre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int		put_mousse(int keycode, int x, int y, void *param)
 
 	key = 0;
 	lst = ((t_tri *)param);
-	printf("mousse %d (%d:%d)\n", keycode, x, y);
 	if ((x >= 225 && x <= 335) && (y >= 505 && y <= 605))
 		key = 18;
 	if ((x >= 20 && x <= 130) && (y >= 505 && y <= 605))
@@ -38,22 +37,14 @@ int		put_mousse(int keycode, int x, int y, void *param)
 		key = 28;
 	if ((x >= 195 && x <= 245) && (y >= 170 && y <= 220))
 		key = 87;
-	if ((x >= 255 && x <= 305) && (y >= 170 && y <= 220))
-		key = 84;
 	put_mousse_next(key, x, y, lst);
 	return (0);
 }
 
 void	put_mousse_next(int key, int x, int y, t_tri *lst)
 {
-	if ((x >= 220 && x <= 270) && (y >= 270 && y <= 320))
-		key = 126;
-	if ((x >= 220 && x <= 270) && (y >= 330 && y <= 380))
-		key = 125;
-	if ((x >= 160 && x <= 210) && (y >= 330 && y <= 380))
-		key = 123;
-	if ((x >= 280 && x <= 330) && (y >= 300 && y <= 380))
-		key = 124;
+	if ((x >= 255 && x <= 305) && (y >= 170 && y <= 220))
+		key = 84;
 	if ((x >= 20 && x <= 40) && (y >= 20 && y <= 40))
 		exit(1);
 	if ((x >= 220 && x <= 270) && (y >= 700 && y <= 750))

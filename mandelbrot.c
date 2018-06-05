@@ -6,7 +6,7 @@
 /*   By: llefevre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/16 16:55:49 by llefevre          #+#    #+#             */
-/*   Updated: 2017/08/29 10:47:19 by llefevre         ###   ########.fr       */
+/*   Updated: 2017/10/14 21:52:17 by llefevre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,36 +18,43 @@ void	tracer_man(t_tri *lst)
 	long double	y;
 	long double	x1;
 	long double	y1;
-	long double	t;
-	long double	r;
-	long double	ri;
-	long int	i;
+	long double i;
 
-	printf("%Lf\n", lst->iter);
 	put_in_black(lst);
 	x = 0.0;
 	y = 0.0;
-	while(x < 1000)
+	while (x < 1000)
 	{
-		while( y < 1000)
+		while (y < 1000)
 		{
 			lst->color = lst->swap_color;
-			x1 = (x - lst->rv1) / lst->zoom;		
+			x1 = (x - lst->rv1) / lst->zoom;
 			y1 = (y - lst->rv2) / lst->zoom;
-			r = 0;///*-0.70176 * -0.70176;*/ lst->v2;
-			ri = 0;///*-0.3842 * -0.3842;*/ lst->v1;
-			i = 0;
-			while ((r * r + ri * ri) < 4 && i < lst->iter)
-			{
-				t = r;
-				r = (r * r) - (ri * ri) + x1;
-				ri = ((2 * ri) * t) + y1;
-				i++;
-			}
+			i = man_algo(x1, y1, lst);
 			put_in_color(x, y, i, lst);
 			y++;
 		}
 		x++;
 		y = 0;
 	}
+}
+
+int		man_algo(long double x1, long double y1, t_tri *lst)
+{
+	long double	r;
+	long double	ri;
+	long double	i;
+	long double	t;
+
+	r = 0;
+	ri = 0;
+	i = 0;
+	while ((r * r + ri * ri) < 4 && i < lst->iter)
+	{
+		t = r;
+		r = (r * r) - (ri * ri) + x1;
+		ri = ((2 * ri) * t) + y1;
+		i++;
+	}
+	return (i);
 }

@@ -6,7 +6,7 @@
 #    By: llefevre <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/06/07 20:31:18 by llefevre          #+#    #+#              #
-#    Updated: 2017/08/29 08:23:17 by llefevre         ###   ########.fr        #
+#    Updated: 2017/10/17 17:47:04 by llefevre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 
 NAME = fractol
 
-FLAGS = -lmlx -L ./minilibx_macos2 -framework OpenGL -framework AppKit
+FLAGS = -lmlx -framework OpenGL -framework AppKit -fsanitize=address -g
 
 C_FOLDER = ./
 
@@ -24,7 +24,8 @@ LIB_FOLD = ./libft/
 
 LIB = libft/libft.a
 
-SRC = main mandelbrot put_cub put_keycode julia burningship color interface_burn put_mousse zoom interface_julia interface_mandel
+SRC = main mandelbrot put_cub put_keycode julia burningship color \
+	  interface_burn put_mousse zoom interface_julia interface_mandel tri_map
 
 C_FILE = $(addsuffix .c,$(addprefix $(C_FOLDER),$(SRC)))
 
@@ -33,7 +34,7 @@ O_FILE = $(addsuffix .o,$(SRC))
 all: $(NAME)
 
 $(NAME): $(LIB) $(O_FILE)
-	@gcc -Wall -Werror -Wextra -O3 -o $@ $^ $(FLAGS) -L$(LIB_FOLD) -I$(LIB_FOLD) -lft
+	@gcc -Wall -Werror -Wextra -O2 -o $@ $^ $(FLAGS) -L$(LIB_FOLD) -I$(LIB_FOLD) -lft
 	@echo "\033[32mexecutable OK\033[0m"
 	@echo "\033[33;40m.................................................................................oooo.................................................................\n\
 	............................................................................ooooooooo....................ooo..........................................\n\

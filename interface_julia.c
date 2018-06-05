@@ -6,7 +6,7 @@
 /*   By: llefevre <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/29 07:25:08 by llefevre          #+#    #+#             */
-/*   Updated: 2017/08/29 07:52:15 by llefevre         ###   ########.fr       */
+/*   Updated: 2017/10/15 17:31:33 by llefevre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,40 +18,31 @@ void	suite_marge_j(t_tri *lst)
 	lst->t1 = 110;
 	lst->t2 = 100;
 	put_cub_bis(20, 400, lst);
-	lst->color = 0X1DA708;		//green
+	lst->color = 0X1DA708;
 	put_cub_bis(135, 400, lst);
-	lst->color = 0X522376;		//purple
+	lst->color = 0X522376;
 	put_cub_bis(135, 505, lst);
-	lst->color = 0XEC7063;		//pink
+	lst->color = 0XEC7063;
 	put_cub_bis(20, 505, lst);
 }
 
 void	next_marge_j(t_tri *lst)
 {
-	lst->color = 0XFAA035;		//orange
+	lst->color = 0XFAA035;
 	put_cub_bis(255, 400, lst);
 	lst->color = 0XEA89B2;
 	put_cub_bis(370, 400, lst);
 	lst->color = 0X38148E;
 	put_cub_bis(255, 505, lst);
-	lst->color = 0X292121;		//black
+	lst->color = 0X292121;
 	put_cub_bis(370, 505, lst);
 	lst->color = 0X292121;
 	lst->t1 = 20;
 	lst->t2 = 20;
 	put_cub_bis(20, 20, lst);
 	mlx_string_put(lst->mlx, lst->win2, 25, 18, 0X000000, "X");
-	mlx_string_put(lst->mlx, lst->win2, 185, 140, 0X00FF00, "ZOOM +");
 	lst->t1 = 50;
 	lst->t2 = 50;
-	put_cub_bis(195, 170, lst);
-	mlx_string_put(lst->mlx, lst->win2, 260, 140, 0X00FF00, "ZOOM -");
-	put_cub_bis(255, 170, lst);
-	mlx_string_put(lst->mlx, lst->win2, 200, 240, 0X00FF00, "DIRECTION");
-	put_cub_bis(220, 270, lst);
-	put_cub_bis(220, 330, lst);
-	put_cub_bis(160, 330, lst);
-	put_cub_bis(280, 330, lst);
 }
 
 void	last_marge_j(t_tri *lst)
